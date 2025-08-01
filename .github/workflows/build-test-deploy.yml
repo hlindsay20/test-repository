@@ -42,7 +42,7 @@ jobs:
       name: production
       url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: checkout repo
@@ -62,7 +62,7 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.out'
+          path: './out'
       - name: deploy
         id: deployment
         uses: actions/deploy-pages@v4
